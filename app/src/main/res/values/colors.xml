@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Prime">#FF9800</color>
+    <color name="AC">#FF3377</color>
+    <color name="C">#337DFF</color>
+    <color name="ZERO">#FF8033</color>
+    <color name="PAR">#FF8F8382</color>
+</resources>
