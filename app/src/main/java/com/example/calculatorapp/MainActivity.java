@@ -128,8 +128,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // check for "C" button
         if (buttonText.equals("C")) {
-            // remove last value in dataToCalculate
-            dataToCalculate = dataToCalculate.substring(0, dataToCalculate.length() -1);
+            // check if solutionTV data is on last value or empty
+            if (solutionTV.length() <= 1) {
+                // reset dataToCalculate to empty
+                dataToCalculate = "";
+            }
+            else {
+                // remove last value in dataToCalculate
+                dataToCalculate = dataToCalculate.substring(0, dataToCalculate.length() - 1);
+            }
             // if none of the above, add current button text to dataToCalculate
         } else {
             dataToCalculate = dataToCalculate + buttonText;
@@ -158,6 +165,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * @return Returns String, the newly calculated answer.
      */
     String getResults(String data) {
+        // return 0 if no data to calculate
+        if (data.isEmpty()) {
+            return "0";
+        }
         // try to calculate the math problem
         try {
             // creates new Context object
